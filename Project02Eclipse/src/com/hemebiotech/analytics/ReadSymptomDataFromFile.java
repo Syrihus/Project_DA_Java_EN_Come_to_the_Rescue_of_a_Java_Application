@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
- *
+ * Create a list with Symtoms.txt contains. Implements interface ISymptomReader
+ * 
+ * @see ISymptomReader
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
@@ -17,13 +18,14 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	/**
 	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 * @return result to processed list items in AnalyticsCounter
 	 */
 	public ReadSymptomDataFromFile (String filepath) {
 		this.filepath = filepath;
 	}
 	
 	@Override
-	public List<String> GetSymptoms() {
+	public List<String> getSymptoms(){
 		ArrayList<String> result = new ArrayList<String>();
 		
 		if (filepath != null) {
