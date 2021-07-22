@@ -9,7 +9,7 @@ import java.util.Map;
  * write symptom frequencies in file "results.out"
  * 
  * @author Arnaud
- * @see ISymptomWriter
+ * @see ISymptomWriter interface
  */
 public class WriteSymptomDataToFile implements ISymptomWriter {
 	private String resultFileName;
@@ -17,7 +17,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	/**
 	 * Constructor to change file name in static void main
 	 * 
-	 * @param resultFileName
+	 * @param resultFileName file path and name of file
 	 */
 	public WriteSymptomDataToFile(String resultFileName) {
 		this.resultFileName = resultFileName;
@@ -28,8 +28,8 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	 * "result.out" or return a empty file
 	 * 
 	 * @author Arnaud
-	 * @param symptomListFrequency
-	 * @throws IOException
+	 * @param symptomListFrequency a Map with symptoms and count duplications. On per line. Ex: fever=7; param return of methode countSymptomFrequency
+	 * @throws IOException if the file path is no define or wrong
 	 */
 	@Override
 	public void writeSymptomDataToFile(Map<String, Integer> symptomListFrequency) throws IOException {

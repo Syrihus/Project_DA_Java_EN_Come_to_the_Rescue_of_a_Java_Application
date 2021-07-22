@@ -16,7 +16,7 @@ public class AnalyticsCounter {
 		
 		AnalyticsCounter analyticsCounter = new AnalyticsCounter(); 
 
-		ISymptomReader symptomReader = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
+		ISymptomReader symptomReader = new ReadSymptomDataFromFile("C:\\Users\\Syrihus\\Desktop\\OCR\\eclipse\\Git\\PHEME_nadalin_arnaud\\PHEME_01_code\\Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt");
 
 		List<String> symptomListFromFile;
 		try{
@@ -35,7 +35,7 @@ public class AnalyticsCounter {
 		}
 	
 	
-		ISymptomWriter symptomWriter = new WriteSymptomDataToFile("Project02Eclipse/results.out");
+		ISymptomWriter symptomWriter = new WriteSymptomDataToFile("C:\\Users\\Syrihus\\Desktop\\OCR\\eclipse\\Git\\PHEME_nadalin_arnaud\\PHEME_01_code\\Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/results.out");
 		try{
 			symptomWriter.writeSymptomDataToFile(symptomMapFrequencies);
 		}	
@@ -47,8 +47,8 @@ public class AnalyticsCounter {
 	/**
 	 * cross the symptom list "symptomListFromFile" and count the frequencies and write data in Map symptomMapFrequencies. 
 	 * 
-	 * @param symptomListFromFile
-	 * @return symptomMapFrequencies
+	 * @param symptomListFromFile symptoms list create with "symptomReader.getSymptoms()" in static void main. List with many duplications
+	 * @return symptomMapFrequencies a Map with symptoms and count duplications. On per line. Ex: fever=7; 
 	 * 
 	 */
 	public TreeMap<String, Integer> countSymptomFrequency(List<String> symptomListFromFile) {

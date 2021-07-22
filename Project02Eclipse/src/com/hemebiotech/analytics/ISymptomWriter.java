@@ -16,8 +16,8 @@ public interface ISymptomWriter {
 	/**
 	 * If data are no available, return empty file
 	 * 
-	 * @param symptomListFrequency
-	 * @throws IOException
+	 * @param symptomListFrequency create in AnalyticsCounter class with "symptomListFromFile = symptomReader.getSymptoms();"
+	 * @throws IOException if the file path of symptoms.txt file is no define or wrong
 	 */
 	void writeSymptomDataToFile(Map<String, Integer> symptomListFrequency) throws IOException;
 }
